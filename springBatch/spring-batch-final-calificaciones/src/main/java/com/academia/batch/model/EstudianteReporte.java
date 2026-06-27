@@ -3,15 +3,16 @@ package com.academia.batch.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collation = "reportes_estudiantes")
+@Document(collection = "reportes_estudiantes")
 public class EstudianteReporte {
 
     @Id
     private String id;
     private String nombre;
     private String grupo;
-    private Double promedio;
+    private double promedio;
     private String estado;
+
     public EstudianteReporte() {
     }
 
@@ -34,5 +35,4 @@ public class EstudianteReporte {
     public String toString() {
         return nombre + " | Grupo: " + grupo + " | Promedio: " + promedio + " | Estado: " + estado;
     }
-
 }
